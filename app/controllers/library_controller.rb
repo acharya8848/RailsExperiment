@@ -1,4 +1,17 @@
 class LibraryController < ApplicationController
+  layout :resolve_layout
+
+  private
+
+  def resolve_layout
+    case action_name
+    when "login", "signup"
+      "account"
+    else
+      "application"
+    end
+  end
+
   def index
   end
 
@@ -8,7 +21,7 @@ class LibraryController < ApplicationController
   def signup
   end
 
-  def books
+  def catalog
   end
 
   def rent

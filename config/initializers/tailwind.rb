@@ -3,4 +3,6 @@
 # When the bug is fixed, this file can be safely removed
 puts("\n== Compiling tailwindcss ==")
 
-system('bundle exec tailwindcss -i app/assets/stylesheets/application.tailwind.css -o app/assets/builds/tailwind.css')
+system('bundle exec tailwindcss -i app/assets/stylesheets/application.tailwind.css -o app/assets/builds/tailwind.css -c config/tailwind.config.js')
+
+puts(ENV['SALT'].to_s.length)

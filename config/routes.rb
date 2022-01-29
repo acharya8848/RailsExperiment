@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   root 'library#index'
-  get 'library/login'
-  get 'library/signup'
-  get 'library/books'
-  get 'library/rent'
+  get 'login', to: 'library#login'
+  get 'signup', to: 'library#signup'
+  get 'catalog', to: 'library#catalog'
+  get 'rent', to: 'library#rent'
 end
